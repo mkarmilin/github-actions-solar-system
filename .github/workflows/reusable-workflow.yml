@@ -10,5 +10,5 @@ jobs:
   integration-test:
     runs-on: ubuntu-latest
     steps:
-        run: |
+      - run: |
           curl https://${{inputs.ingress-url}}/live -s -k | jq -r .status | grep -i live
